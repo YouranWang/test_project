@@ -19,7 +19,7 @@ from commonroad_route_planner.route_planner import RoutePlanner
 class ScenarioParams:
     verbose = True
 
-    ### scenario options ###############################
+    ### scenario options test!!!!!!###############################
     dt = 0.1
 
     ## vehicle dynamics
@@ -506,5 +506,13 @@ if __name__ == '__main__':
     long_state_list, time_intervals = planner.solve_longitudinal()
     targe_center_line = target_lanelet.center_vertices # TODO
     planner.solve_lateral(targe_center_line, time_intervals)
+    ### scenario options test!!!!!!###############################
+    dt = 0.1
+
+    ## vehicle dynamics
+    length = 5
+    width = 2
+    a_max_total = 9.81 # lateral and longitudinal acceleration combined
+    lat_v_max = 5.0
 
     curvilinear_state_list = planner.states.state_list_cr
